@@ -2,16 +2,17 @@ type Student = {
     firstName: string,
     lastName: string,
     age: number,
-    grades: Grade[];
+    grades: (GermanGrade | AmericanGrade)[];
 }
 
-type Grade = 1 | 2 | 3 | 4 | 5 | 6;
+type GermanGrade = 1 | 2 | 3 | 4 | 5 | 6;
+type AmericanGrade = "A" | "B" | "C" | "D" | "E" | "F";
 
 const student1: Student = {
     firstName: "Eva",
     lastName: "Goetzke",
     age: 27,
-    grades: [1,2,1]
+    grades: [1,"B",1, "A", "B"]
 };
 console.log(student1);
 
