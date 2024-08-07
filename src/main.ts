@@ -30,12 +30,11 @@ const student3: Student = {
 
 const outputStudent = (student: Student) : string => {
     let output: string = `${student.firstName} ${student.lastName} (${student.age})\n`;
-    for (let i:number = 0; i < 30; i++) {
-        output += "="
-    }
+    output += "=".repeat(30)
     output += `\nGrades: ${student.grades.map((grade) => grade === undefined ? "*" : grade ).join(",")}`
     return output;
 }
+console.log(outputStudent(student1));
 
 const outputStudentList = (students: Student[]) : string => {
     return students.map(student => outputStudent(student)).join("\n\n");
