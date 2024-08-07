@@ -30,7 +30,8 @@ const student3: Student = {
 
 const outputStudent = (student: Student) : string => {
     let output: string = `${student.firstName} ${student.lastName} (${student.age})\n`;
-    for (let i:number = 0; i < 30; i++) {
+    const charCount : number = student.firstName.length + student.lastName.length + student.age.toString().length + 4;
+    for (let i:number = 0; i < charCount; i++) {
         output += "="
     }
     output += `\nGrades: ${student.grades.map((grade) => grade === undefined ? "*" : grade ).join(",")}`
