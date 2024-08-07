@@ -37,7 +37,7 @@ const outputStudent = (student: Student) : string => {
 console.log(outputStudent(student1));
 
 const outputStudentList = (students: Student[]) : string => {
-    return students.map(student => outputStudent(student)).join("\n\n");
+    return students.map(outputStudent).join("\n\n");
 }
 
 console.log(outputStudentList([student1, student2, student3]));
